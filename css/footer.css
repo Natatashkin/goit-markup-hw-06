@@ -1,0 +1,368 @@
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-footer);
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 45px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* =======Стилизация футера=============== */
+
+.bottom-address {
+  line-height: 1.71;
+
+  margin-right: 69px;
+}
+.bottom-address > .logo {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.bottom-contacts {
+  text-decoration: none;
+  color: var(--text-footer-secondary);
+
+  transition: color 250ms var(--cubic);
+}
+.bottom-contacts:hover,
+.bottom-contacts:focus {
+  color: var(--akcent-color);
+}
+
+/* ------- Стилизацмя социальных иконок ---------*/
+.social-links {
+  margin-right: 94px;
+}
+
+.social-text {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-footer {
+  fill: var(--svg-footer);
+  background-color: var(--svg-bg-footer);
+  border-radius: 50%;
+}
+
+.social-list .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* --------- Стилизация формы подписки----------- */
+
+label[for="email"] {
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.subscribe-email {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--button-shadow);
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--cubic);
+}
+
+.subscribe-email:focus,
+.subscribe-email:hover {
+  border-color: var(--akcent-color);
+}
+
+.subscribe-email::placeholder {
+  color: var(--text-footer-secondary);
+  line-height: 1.25;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  color: var(--text-footer);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+
+  background-color: var(--akcent-color);
+  box-shadow: var(--button-shadow);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 250ms var(--cubic);
+}
+.button-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: var(--akcent-hover-button);
+}
+
+button[type="submit"]:active {
+  box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============Модальное окно================= */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+
+  transition: transform 250ms var(--cubic), background-color 250ms var(--cubic);
+}
+
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+
+  transform: scale(0);
+  /* background-color: none; */
+}
+
+/* ---------- ФОрма в модальном окне------------- */
+
+.cta-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  background-color: var(--bg-main-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+/* ----------текст в форме-------------- */
+
+.form-title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--title-color);
+}
+
+/* -----------------------поля формы-------------------- */
+
+.form-field {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 16px;
+  padding-left: 42px;
+  border: var(--form-border);
+  border-radius: 4px;
+  outline-color: var(--akcent-color);
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translate(0, -50%);
+
+  transition: transform 250ms var(--cubic), color 250ms var(--cubic);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-26px, -36px);
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--akcent-color);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.form-icon,
+.close-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--svg-form-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+
+  transition: fill 250ms var(--cubic);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--akcent-color);
+}
+
+.form-comment {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.comment-text {
+  resize: none;
+  width: 100%;
+  height: 120px;
+
+  padding: 12px 16px;
+
+  border: var(--form-border);
+  border-radius: 4px;
+  outline-color: var(--akcent-color);
+}
+
+.comment-label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  transition: transform 250ms var(--cubic), color 250ms var(--cubic);
+}
+
+.comment-text:focus + .comment-label {
+  transform: translateY(-31px);
+  color: var(--akcent-color);
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+/* ------------поле с checkbox----------------------- */
+
+.form-policy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* ------------- Вариант 1 -  с вложеным input в label ---------------*/
+
+/* .checkbox-icon {
+  display: inline-block;
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--svg-form-color);
+  border-radius: 3px;
+  background-color: var(--bg-main-color);
+  transition: border 250ms var(--cubic);
+}
+
+.policy {
+  transition: border-color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.policy:focus + .checkbox-icon {
+  border: 2px solid var(--akcent-color);
+}
+
+.policy:checked + .checkbox-icon {
+  background-color: var(--akcent-color);
+  background-image: url(../images/icon-check.svg);
+  background-origin: border-box;
+  border-color: var(--akcent-color);
+} */
+
+/* ---------- Вариант 2 - кастомный checkbox через pesudo------------*/
+
+.policy-label {
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.policy-label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 3px;
+  background-color: var(--bg-main-color);
+
+  transition: border-color 250ms var(--cubic),
+    background-color 250ms var(--cubic);
+}
+
+.policy:focus + .policy-label::before {
+  border-color: var(--akcent-color);
+}
+.policy:checked + .policy-label::before {
+  border-color: var(--akcent-color);
+  background-image: url(../images/icon-check.svg);
+  background-color: var(--akcent-color);
+  background-origin: border-box;
+}
+
+/* --------------- ссылка на условия и правила------------------- */
+
+.policy-link {
+  color: var(--akcent-color);
+}

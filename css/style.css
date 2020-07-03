@@ -1,0 +1,328 @@
+:root {
+  --akcent-color: #2196f3;
+  --text-color: #757575;
+  --text-hover-color: #ffffff;
+  --title-color: #212121;
+  --title-secondary: #ffffff;
+  --bg-main-color: #ffffff;
+  --bg-secondary-color: #f5f4fa;
+  --svg-color: #afb1b8;
+  --svg-hover-color: #ffffff;
+  --footer-bg: #2f303a;
+  --text-footer: #ffffff;
+  --text-footer-secondary: rgba(255, 255, 255, 0.6);
+  --radiobatton-color: #f5f4fa;
+  --akcent-hover-bg: rgba(33, 150, 243, 0.9);
+}
+
+body {
+  background-color: var(--bg-main-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  line-height: 1.14;
+}
+
+main {
+  background-color: var(--bg-main-color);
+}
+
+address {
+  font-style: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  letter-spacing: 0.03em;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-footer);
+}
+
+/* -------Стили Логотипа-------- */
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  color: var(--akcent-color);
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-top {
+  color: #000000;
+}
+
+.logo-bottom {
+  color: #ffffff;
+}
+
+/* ====== Стилизация Шапки сайта ========= */
+
+/* --------------Стилизация Меню сайта--------- */
+
+.main-menu {
+  list-style: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  padding-left: 0;
+}
+
+.link {
+  color: #212121;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--akcent-color);
+}
+/* ------Стилизация блока контактов в шапке------- */
+
+.top-сontacts {
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.top-сontacts:hover,
+.top-сontacts:focus {
+  color: var(--akcent-color);
+}
+
+/* ==========Стилизация блока герой============ */
+.cta {
+  background-color: #e5e5e5; /*временное решение, чтобы видеть этот текст*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-secondary);
+}
+
+.cta-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  color: inherit;
+}
+.cta-button {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--akcent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:active {
+  box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*============== Стилизация блока Преимущества =============== */
+.section {
+  color: var(--text-color);
+}
+
+.hidden {
+  display: none;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.section-list {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.section-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 270px;
+  color: inherit;
+  font-size: 14px;
+}
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+.section-text {
+  line-height: 1.71;
+}
+
+/* ======= Стилизация блока чем мы занимаемся */
+.secondary-color {
+  color: var(--title-secondary);
+
+  background-color: rgba(
+    47,
+    48,
+    58,
+    0.8
+  ); /*временное решение, чтобы видеть этот текст*/
+}
+
+.wide-card {
+  width: 370px;
+}
+
+/* ============ Стилизация блока Наша команда ================ */
+
+.team {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.social-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.social {
+  text-decoration: none;
+  color: var(--svg-color);
+}
+
+/* =========Стилизация блока Постоянные клиенты ================= */
+.section-logo {
+  text-decoration: none;
+  color: var(--svg-color);
+}
+
+.section-logo:hover,
+.section-logo:focus {
+  color: var(--akcent-color);
+}
+/* =======Стилизация футера=============== */
+
+.bottom-address {
+  line-height: 1.71;
+}
+
+.bottom-contacts {
+  text-decoration: none;
+  color: var(--text-footer-secondary);
+}
+
+/* ------- Стилизацмя социальных иконок ---------*/
+.social-text {
+  text-transform: uppercase;
+}
+
+/* --------- Стилизация формы подписки----------- */
+
+label[for="email"] {
+  text-transform: uppercase;
+}
+
+/* ::-webkit-input-placeholder {
+  font-size: 16;
+  line-height: 1.9;
+} */
+.copy-rights {
+  font-size: 12px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ================ PORTPHOLIO================== */
+
+.projects {
+  font-size: 16px;
+}
+.filter-button {
+  border: none;
+  outline: none;
+  --h: 26px;
+  height: var(--h);
+  line-height: var(--h);
+  padding: 0 22px;
+  margin-right: 8px;
+  background-color: var(--radiobatton-color);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--akcent-color);
+  color: var(--text-hover-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.filter-button:active {
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== Стилизация блоков с проектами =========== */
+.projects-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+}
+
+.project-title {
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  line-height: 2;
+}
+
+.project-type {
+  line-height: 1.9;
+}
+
+.project-text {
+  color: var(--text-hover-color);
+  background-color: var(
+    --akcent-hover-bg
+  ); /* временное решение, чтобы видеть текст*/
+  font-size: 18px;
+  line-height: 1.55;
+}
